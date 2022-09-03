@@ -110,7 +110,7 @@ const Post = ({ post }) => {
                   name={post.author.name}
                   description={post.author.tagline}
                   avatarUrl={imageBuilder(post.author.image).url()}
-                  externalURL="https://www.azharzaman.com"
+                  internalHref="/"
                 />
               </div>
             </div>

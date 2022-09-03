@@ -27,14 +27,8 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <link
-          rel="icon"
-          href="https://upload.wikimedia.org/wikipedia/commons/3/3e/Eo_circle_pink_letter-a.svg"
-        />
-        <link
-          rel="apple-touch-icon"
-          href="https://upload.wikimedia.org/wikipedia/commons/3/3e/Eo_circle_pink_letter-a.svg"
-        />
+        <link rel="icon" href="favicon.svg" />
+        <link rel="apple-touch-icon" href="favicon.svg" />
       </Head>
       <Wrappers>{getLayout(<Component {...pageProps} />)}</Wrappers>
     </>

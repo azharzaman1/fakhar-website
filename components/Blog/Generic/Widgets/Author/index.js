@@ -1,4 +1,5 @@
 import React from "react";
+import NextLink from "next/link";
 import Link from "../../../../Generic/Link";
 import Text from "../../../../Generic/Text";
 import PropTypes from "prop-types";
@@ -6,9 +7,11 @@ import Image from "next/image";
 
 const AuthorWidget = ({
   avatarUrl,
+  loading,
   name,
   variant,
   externalURL,
+  internalHref,
   description,
   className,
 }) => {
@@ -26,16 +29,25 @@ const AuthorWidget = ({
           height={variant === "inline" ? 40 : 75}
         />
       </div>
-      <div
-        className={`author-info ml-2 flex flex-col ${
-          variant === "inline" ? "items-start justify-start" : "items-center"
-        }`}
-      >
-        <Link href={externalURL || "#"} blank>
-          {name}
-        </Link>
-        <Text type="info">{description || "Content creator"}</Text>
-      </div>
+      {name && (
+        <div
+          className={`author-info ml-2 flex flex-col ${
+            variant === "inline" ? "items-start justify-start" : "items-center"
+          }`}
+        >
+          <div className={variant === "block" && "mt-2"}>
+            {externalURL && (
+              <Link href={externalURL} blank>
+                {name}
+              </Link>
+            )}
+            {internalHref && <NextLink href={internalHref}>{name}</NextLink>}
+          </div>
+          <div className={variant === "block" && "mt-1"}>
+            <Text type="info">{description || "Content creator"}</Text>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
