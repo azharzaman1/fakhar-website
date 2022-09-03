@@ -14,6 +14,7 @@ import resource from "./resource";
 import gallery from "./gallery";
 import resourceGroup from "./resourceGroup";
 import comment from "./comment";
+import certification from "./certification";
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -26,6 +27,7 @@ export default createSchema({
     // in the studio.
     post,
     author,
+    certification,
     category,
     comment,
 

@@ -1,5 +1,10 @@
 import React from "react";
+import dynamic from "next/dynamic";
 import Container from "../../../Generic/Layout/Container";
+
+const CertificationCard = dynamic(() => import("./CertificationCard"), {
+  ssr: false,
+});
 
 const Certifications = () => {
   return (
@@ -13,7 +18,9 @@ const Certifications = () => {
           </div>
         </div>
         <div className="certifications grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div className="certificate"></div>
+          <div className="certificate">
+            <CertificationCard />
+          </div>
         </div>
       </Container>
     </div>
