@@ -4,24 +4,15 @@ import workerSrc from "@lib/pdf-worker";
 
 pdfjs.GlobalWorkerOptions.workerSrc = workerSrc;
 
-const CertificationCard = () => {
-  const [file, setFile] = useState("./files/scouting-certificate.pdf");
+const CertificationCard = ({ file }) => {
   const [numPages, setNumPages] = useState(null);
 
   function onDocumentLoadSuccess({ numPages: nextNumPages }) {
     setNumPages(nextNumPages);
   }
 
-  function onFileChange(event) {
-    setFile(event.target.files[0]);
-  }
-
   return (
-    <div>
-      <div>
-        <label htmlFor="file">Load from file:</label>{" "}
-        <input onChange={onFileChange} type="file" />
-      </div>
+    <div className="">
       <Document file={file} onLoadSuccess={onDocumentLoadSuccess}>
         {Array.from({ length: numPages }, (_, index) => (
           <Page
