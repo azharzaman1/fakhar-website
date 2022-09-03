@@ -1,9 +1,12 @@
 import Head from "next/head";
 import client from "@lib/sanity";
 import { getAllPostsQuery } from "@lib/sanity/queries";
-import Blog from "../components/pages/Blog";
+
+import Blog from "../components/pages/Home/Blog";
 import Footer from "components/Generic/Footer";
 import Header from "components/Generic/Header";
+import Certifications from "components/pages/Home/Certifications";
+
 export default function Home({ posts }) {
   return (
     <div className="page home-page">
@@ -11,7 +14,8 @@ export default function Home({ posts }) {
         <title>Fakhar Zaman - Biology Student</title>
       </Head>
       <Header />
-      <main className="blog-container">
+      <main>
+        <Certifications />
         <Blog posts={posts} />
       </main>
       <Footer />

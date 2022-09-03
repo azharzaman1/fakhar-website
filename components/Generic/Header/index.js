@@ -8,20 +8,30 @@ import IconButton from "../IconButton";
 
 const Header = () => {
   return (
-    <header className="bg-white shadow-sm border-b border-surface-1">
-      <div className="header-container">
-        <div className="header-main min-h-[60px] px-4 sm:px-6 md:px-12 lg:px-16 flex items-center justify-between">
+    <header className="bg-white shadow-sm border-b border-surface-1 min-h-[80px] flex items-center">
+      <div className="header-container w-full">
+        <div className="header-main px-4 sm:px-6 md:px-12 lg:px-16 flex items-center justify-between">
           <div className="header-main-left">
-            <Link href="/">
-              <div className="header-left-logo cursor-pointer relative w-24 h-12">
-                <Image
-                  src="/logo.png"
-                  alt="fakhar logo"
-                  layout="fill"
-                  objectFit="contain"
-                />
-              </div>
-            </Link>
+            <div className="header-main-left-logo">
+              <Link href="/">
+                <div className="header-left-author flex space-x-4">
+                  <div className="header-author-image cursor-pointer">
+                    <img
+                      src="https://cdn.sanity.io/images/59siairy/production/4c8eceb295c29827f9be0861c6aaca58342244a8-612x612.png"
+                      alt="fakhar image"
+                      width={50}
+                      height={50}
+                    />
+                  </div>
+                  <div className="header-author-info">
+                    <h2 className="font-medium font-heading-1 text-md">
+                      Fakhar Zaman
+                    </h2>
+                    <p className="text-sm text-normal">Zoology Student</p>
+                  </div>
+                </div>
+              </Link>
+            </div>
           </div>
           <div className="header-main-center flex-1"></div>
           <div className="header-main-right">
