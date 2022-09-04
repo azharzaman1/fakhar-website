@@ -18,3 +18,39 @@
     url("./fonts//Charter\ Bold.otf") format("opentype"),
     url("./fonts//Charter\ Bold.ttf") format("truetype");
 }
+
+@font-face {
+  font-family: "Cambon";
+  src: url("./fonts/cambon-regular-webfont.woff2") format("woff2"),
+    url("./fonts/cambon-regular-webfont.woff") format("woff"),
+    url("./fonts/Cambon-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Cambon Bold";
+  src: url("./fonts/cambon-bold-webfont.woff2") format("woff2"),
+    url("./fonts/cambon-bold-webfont.woff") format("woff"),
+    url("./fonts/Cambon-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Cambon Medium";
+  src: url("./fonts/cambon-medium-webfont.woff2") format("woff2"),
+    url("./fonts/cambon-medium-webfont.woff") format("woff"),
+    url("./fonts/Cambon-Medium.ttf") format("truetype");
+  font-weight: medium;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Cambon Semibold";
+  src: url("./fonts/cambon-semibold-webfont.woff2") format("woff2"),
+    url("./fonts/cambon-semibold-webfont.woff") format("woff"),
+    url("./fonts/Cambon-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}

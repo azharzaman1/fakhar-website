@@ -19,7 +19,7 @@ const RelatedPost = ({ post, className }) => {
       </div>
       <div className="related-post-right">
         <Link href={`/post/${post.slug}`}>
-          <h4 className="hover:underline">{post.title}</h4>
+          <h4 className="hover:underline font-heading-1">{post.title}</h4>
         </Link>
       </div>
     </div>

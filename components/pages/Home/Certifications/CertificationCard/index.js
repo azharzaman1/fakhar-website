@@ -1,29 +1,14 @@
-import React, { useState } from "react";
-import { Document, Page, pdfjs } from "react-pdf/dist/esm/entry.webpack5";
-import workerSrc from "@lib/pdf-worker";
+import React from "react";
+import { imageBuilder } from "@lib/sanity";
 
-pdfjs.GlobalWorkerOptions.workerSrc = workerSrc;
-
-const CertificationCard = ({ file }) => {
-  const [numPages, setNumPages] = useState(null);
-
-  function onDocumentLoadSuccess({ numPages: nextNumPages }) {
-    setNumPages(nextNumPages);
-  }
-
+const CertificationCard = ({ certification }) => {
+  console.log({ certification });
   return (
-    <div className="">
-      <Document file={file} onLoadSuccess={onDocumentLoadSuccess}>
-        {Array.from({ length: numPages }, (_, index) => (
-          <Page
-            width={500}
-            key={`page_${index + 1}`}
-            pageNumber={index + 1}
-            renderAnnotationLayer={false}
-            renderTextLayer={false}
-          />
-        ))}
-      </Document>
+    <div className="certification-card bg-white border-2 border-gray-200 rounded-md min-h-[400px] shadow-lg">
+      <img
+        src={imageBuilder(certification.certificate_img).url()}
+        alt={certification.certificate_img?.alt}
+      />
     </div>
   );
 };

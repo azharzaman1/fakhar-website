@@ -7,8 +7,8 @@ const Blog = ({ posts }) => {
     <section className="blog-section py-16 flex justify-center">
       <Container maxWidth="xl">
         <div className="blog-section-header">
-          <div className="blog-section-heading py-4 mb-4">
-            <h2 className="font-heading font-semibold text-3xl md:text-4xl text-center">
+          <div className="blog-section-heading py-4 mb-8">
+            <h2 className="font-heading-1 font-semibold text-3xl md:text-5xl text-center">
               Latest From My Blog
             </h2>
           </div>

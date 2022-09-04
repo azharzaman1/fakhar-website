@@ -37,7 +37,7 @@ const AuthorWidget = ({
         >
           <div className={variant === "block" && "mt-2"}>
             {externalURL && (
-              <Link href={externalURL} blank>
+              <Link href={externalURL} blank className="!font-cambon-medium">
                 {name}
               </Link>
             )}

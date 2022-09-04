@@ -26,7 +26,7 @@ const PostCard = ({ post }) => {
           <Link href={`post/${post.slug.current}`}>
             <Heading
               type="secondary"
-              className="hover:underline hover:text-primary hover:decoration-primary underline-offset-2 transition-colors duration-150 cursor-pointer"
+              className="font-heading-1 hover:underline hover:text-primary hover:decoration-primary underline-offset-2 transition-colors duration-150 cursor-pointer"
             >
               {post.title}
             </Heading>

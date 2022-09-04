@@ -30,8 +30,27 @@ export default {
       type: "date",
     },
     {
-      name: "certificate",
-      title: "Certificate",
+      type: "image",
+      name: "certificate_img",
+      title: "Certificate(JPG/JPEG)",
+      fields: [
+        {
+          title: "Alt",
+          name: "alt",
+          type: "string",
+          description: "Important for SEO and accessiblity.",
+          options: {
+            isHighlighted: true,
+          },
+        },
+      ],
+      options: {
+        hotspot: true,
+      },
+    },
+    {
+      name: "certificate_pdf",
+      title: "Certificate(PDF)",
       type: "file",
     },
   ],

@@ -38,7 +38,7 @@ const RelatedPostsWidget = ({ className }) => {
     <div className={`related-posts-widget ${className}`}>
       {relatedPosts && relatedPosts?.length > 0 ? (
         <React.Fragment>
-          <Heading variant="h3" type="secondary">
+          <Heading variant="h3" type="secondary" className="font-heading-1">
             Related Posts
           </Heading>
           <div className="related-posts flex flex-col space-y-4 mt-4">

@@ -88,7 +88,9 @@ const Post = ({ post }) => {
         <div className="post-content flex-col pb-16 px-8 max-w-5xl">
           <div className="post-header">
             <div className="post-info mt-6 pl-2">
-              <Heading>{post.title}</Heading>
+              <Heading className="font-heading-1 capitalize">
+                {post.title}
+              </Heading>
               <div className="flex flex-col md:flex-row justify-start md:justify-between md:items-center mt-2">
                 <div className="blog-post-timings">
                   <PostTimeWidget

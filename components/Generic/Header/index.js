@@ -12,7 +12,7 @@ const Header = () => {
       <div className="header-container w-full">
         <div className="header-main px-4 sm:px-6 md:px-12 lg:px-16 flex items-center justify-between">
           <div className="header-main-left">
-            <div className="header-main-left-logo">
+            <div className="header-main-left-logo select-none">
               <Link href="/">
                 <div className="header-left-author flex space-x-4">
                   <div className="header-author-image cursor-pointer">
