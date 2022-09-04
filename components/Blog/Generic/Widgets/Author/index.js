@@ -37,11 +37,15 @@ const AuthorWidget = ({
         >
           <div className={variant === "block" && "mt-2"}>
             {externalURL && (
-              <Link href={externalURL} blank className="!font-cambon-medium">
+              <Link href={externalURL} blank>
                 {name}
               </Link>
             )}
-            {internalHref && <NextLink href={internalHref}>{name}</NextLink>}
+            {internalHref && (
+              <NextLink href={internalHref}>
+                <span className="font-charter-bold cursor-pointer">{name}</span>
+              </NextLink>
+            )}
           </div>
           <div className={variant === "block" && "mt-1"}>
             <Text type="info">{description || "Content creator"}</Text>

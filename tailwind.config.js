@@ -47,7 +47,7 @@ module.exports = {
     },
     fontFamily: {
       body: ["Inter", "Roboto", "sans-serif"],
-      "heading-1": ["Cambon Semibold", "Roboto", "sans-serif"],
+      "heading-1": ["Charter Bold", "Inter", "sans-serif"],
       code: ["JetBrains Mono", "monospace"],
 
       "open-sans": ["Open Sans", "sans-serif"],
@@ -55,11 +55,6 @@ module.exports = {
       charter: ["Charter", "sans-serif"],
       "charter-bold": ["Charter Bold", "sans-serif"],
       "charter-italic": ["Charter Italic", "sans-serif"],
-
-      cambon: ["Cambon", "sans-serif"],
-      "cambon-medium": ["Cambon Medium", "sans-serif"],
-      "cambon-semibold": ["Cambon Semibold", "sans-serif"],
-      "cambon-bold": ["Cambon Bold", "sans-serif"],
     },
   },
   plugins: [],
