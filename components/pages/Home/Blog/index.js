@@ -4,7 +4,10 @@ import Container from "../../../Generic/Layout/Container";
 
 const Blog = ({ posts }) => {
   return (
-    <section className="blog-section py-16 flex justify-center">
+    <section
+      className="blog-section py-16 flex justify-center"
+      id="blog-section"
+    >
       <Container maxWidth="xl">
         <div className="blog-section-header">
           <div className="blog-section-heading py-4 mb-8">

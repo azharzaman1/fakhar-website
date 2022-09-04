@@ -1,11 +1,13 @@
 import React from "react";
 import Container from "../../../Generic/Layout/Container";
 import CertificationCard from "./CertificationCard";
-import { getFileUrlFromId } from "@lib/sanity";
 
 const Certifications = ({ certifications }) => {
   return (
-    <div className="certifications-section py-16 flex justify-center">
+    <div
+      className="certifications-section py-16 flex justify-center"
+      id="certifications-section"
+    >
       <Container maxWidth="xl">
         <div className="certifications-section-header">
           <div className="certifications-section-heading py-4 mb-8">

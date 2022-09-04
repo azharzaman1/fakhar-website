@@ -1,12 +1,15 @@
 import React from "react";
+import Link from "next/link";
+import { useRouter } from "next/router";
 import Button from "../Button";
 import { IoLogoMedium } from "react-icons/io5";
-import Link from "next/link";
 import ThemeLink from "../Link";
-import Image from "next/image";
 import IconButton from "../IconButton";
+import Navigation from "./Navigation";
 
 const Header = () => {
+  const router = useRouter();
+
   return (
     <header className="bg-white shadow-sm border-b border-surface-1 min-h-[80px] flex items-center">
       <div className="header-container w-full">
@@ -34,13 +37,14 @@ const Header = () => {
             </div>
           </div>
           <div className="header-main-center flex-1"></div>
-          <div className="header-main-right">
+          <div className="header-main-right flex items-center space-x-4">
+            {!router.asPath.startsWith("/post") && <Navigation />}
             <div className="header-main-right-btns flex">
               <ThemeLink href="https://medium.com/@fakharzaman.fk" blank>
                 <IconButton
                   variant="outlined"
                   color="bnw"
-                  className="mr-2 self-center"
+                  className="mr-4 self-center"
                 >
                   <IoLogoMedium className="text-gray-600 w-4 h-4" />
                 </IconButton>
