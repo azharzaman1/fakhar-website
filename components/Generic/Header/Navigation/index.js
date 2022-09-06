@@ -3,7 +3,7 @@ import { Link } from "react-scroll";
 
 const Navigation = () => {
   return (
-    <div className="header-main-nav">
+    <div className="header-main-nav hidden sm:block">
       <nav>
         <ul className="flex items-center space-x-4">
           <li className="cursor-pointer hover:opacity-90 transition-opacity duration-150">

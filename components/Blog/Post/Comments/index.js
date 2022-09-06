@@ -23,7 +23,7 @@ const Comments = ({ comments, _id }) => {
         />
       )}
 
-      <CommentsArchive comments={comments} className="mt-16" />
+      <CommentsArchive comments={comments} className="my-16" />
     </div>
   );
 };

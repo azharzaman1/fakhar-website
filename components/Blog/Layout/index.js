@@ -5,7 +5,7 @@ import BlogSidebar from "../Sidebar";
 
 const BlogLayout = ({ children, post }) => {
   return (
-    <div className="layout blog-layout min-h-screen flex flex-col">
+    <div className="layout blog-layout min-h-screen max-w-full flex flex-col">
       <Header />
       <div className="blog-layout-content flex justify-center relative">
         <main className="flex-1">{children}</main>

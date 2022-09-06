@@ -19,6 +19,7 @@ import useUserStatus from "hooks/useUserStatus";
 import { BiRefresh } from "react-icons/bi";
 import PostShareWidget from "components/Blog/Post/ShareWidget";
 import { limitString } from "utils";
+import Container from "components/Generic/Layout/Container";
 
 const Post = ({ post }) => {
   const isAdmin = useUserStatus(false);
@@ -64,61 +65,65 @@ const Post = ({ post }) => {
           content={imageBuilder(post.mainImage).url()}
         />
       </Head>
-      <main className="post-page-content flex flex-col items-center relative">
-        <div className="post-banner relative w-full h-64 sm:h-96 md:h-[480px] max-w-5xl">
-          <Image
-            src={imageBuilder(post.mainImage).url()}
-            alt={post.title}
-            layout="fill"
-            objectFit="cover"
-            priority
-          />
-          {isAdmin && (
-            <div className="post-admin-actions flex items-center absolute right-4 top-4 text-white bg-white bg-opacity-10 rounded-full py-1.5 px-2.5">
-              <button
-                title="Revalidate"
-                className="flex items-center"
-                onClick={postRevalidationHandler}
-              >
-                <BiRefresh className={revalidatingPost && "animate-spin"} />
-              </button>
-            </div>
-          )}
-        </div>
-        <div className="post-content flex-col pb-16 px-8 max-w-5xl">
-          <div className="post-header">
-            <div className="post-info mt-6 pl-2">
-              <Heading className="font-charter-bold capitalize">
-                {post.title}
-              </Heading>
-              <div className="flex flex-col md:flex-row justify-start md:justify-between md:items-center mt-2">
-                <div className="blog-post-timings">
-                  <PostTimeWidget
-                    date={post.publishedAt}
-                    readTime={post.readTime}
+      <main className="post-page-content flex flex-col items-center">
+        <div className="post-upper-section w-full max-w-5xl">
+          <div className="post-banner relative w-full h-64 sm:h-96 md:h-[480px]">
+            <Image
+              src={imageBuilder(post.mainImage).url()}
+              alt={post.title}
+              layout="fill"
+              objectFit="cover"
+              priority
+            />
+            {isAdmin && (
+              <div className="post-admin-actions flex items-center absolute right-4 top-4 text-white bg-white bg-opacity-10 rounded-full py-1.5 px-2.5">
+                <button
+                  title="Revalidate"
+                  className="flex items-center"
+                  onClick={postRevalidationHandler}
+                >
+                  <BiRefresh className={revalidatingPost && "animate-spin"} />
+                </button>
+              </div>
+            )}
+          </div>
+          <div className="post-content flex-col pb-8 px-2 w-full">
+            <div className="post-header">
+              <div className="post-info mt-6 pl-2">
+                <Heading className="font-charter-bold capitalize">
+                  {post.title}
+                </Heading>
+                <div className="flex flex-col md:flex-row justify-start md:justify-between md:items-center mt-2">
+                  <div className="blog-post-timings">
+                    <PostTimeWidget
+                      date={post.publishedAt}
+                      readTime={post.readTime}
+                    />
+                  </div>
+                  <PostShareWidget
+                    slug={slug}
+                    className="block mt-3"
+                    horizontal
+                    variant="minimal"
                   />
                 </div>
-                <PostShareWidget
-                  slug={slug}
-                  className="block mt-3"
-                  horizontal
-                  variant="minimal"
-                />
-              </div>
 
-              <div className="blog-post-author mt-4">
-                <AuthorWidget
-                  variant="inline"
-                  name={post.author.name}
-                  description={post.author.tagline}
-                  avatarUrl={imageBuilder(post.author.image).url()}
-                  internalHref="/"
-                />
+                <div className="blog-post-author mt-4">
+                  <AuthorWidget
+                    variant="inline"
+                    name={post.author.name}
+                    description={post.author.tagline}
+                    avatarUrl={imageBuilder(post.author.image).url()}
+                    internalHref="/"
+                  />
+                </div>
               </div>
             </div>
           </div>
-          <PostBody content={post.body} />
-          <PostComments _id={post._id} comments={post.comments} />
+          <Container>
+            <PostBody content={post.body} />
+            <PostComments _id={post._id} comments={post.comments} />
+          </Container>
         </div>
       </main>
     </div>
