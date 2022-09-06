@@ -19,8 +19,8 @@ export default function Home({ posts, certifications }) {
       </Head>
       <Header />
       <main>
-        <Certifications certifications={certifications} />
         <Blog posts={posts} />
+        <Certifications certifications={certifications} />
       </main>
       <Footer />
     </div>

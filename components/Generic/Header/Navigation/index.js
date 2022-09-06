@@ -8,24 +8,24 @@ const Navigation = () => {
         <ul className="flex items-center space-x-4">
           <li className="cursor-pointer hover:opacity-90 transition-opacity duration-150">
             <Link
-              to="certifications-section"
+              to="blog-section"
               smooth={true}
               offset={50}
               duration={250}
               isDynamic={true}
             >
-              Certifications
+              Blog
             </Link>
           </li>
           <li className="cursor-pointer hover:opacity-90 transition-opacity duration-150">
             <Link
-              to="blog-section"
+              to="certifications-section"
               smooth={true}
               offset={50}
-              duration={750}
+              duration={500}
               isDynamic={true}
             >
-              Blog
+              Certifications
             </Link>
           </li>
         </ul>
