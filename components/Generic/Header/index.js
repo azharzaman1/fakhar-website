@@ -51,11 +51,11 @@ const Header = () => {
                   <IoLogoMedium className="text-gray-600 w-4 h-4" />
                 </IconButton>
               </ThemeLink>
-              <Link href="/files/azhar_resume.pdf" download>
+              {/* <Link href="/files/azhar_resume.pdf" download>
                 <Button variant="contained" color="bnw" raised>
                   Resume/CV
                 </Button>
-              </Link>
+              </Link> */}
             </div>
           </div>
         </div>
