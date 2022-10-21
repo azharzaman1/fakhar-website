@@ -20,7 +20,7 @@ const Header = () => {
                 <div className="header-left-author flex items-center space-x-2 md:space-x-4">
                   <div className="header-author-image cursor-pointer">
                     <img
-                      src="https://cdn.sanity.io/images/59siairy/production/4c8eceb295c29827f9be0861c6aaca58342244a8-612x612.png"
+                      src="https://cdn.sanity.io/images/59siairy/production/88ef052187c5b1dfc0ecebc62a30e62d8125cc9e-612x612.png"
                       alt="fakhar image"
                       width={50}
                       height={50}

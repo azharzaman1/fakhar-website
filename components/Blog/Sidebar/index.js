@@ -28,8 +28,6 @@ const BlogSidebar = () => {
     };
   }, []);
 
-  console.log({ author });
-
   return (
     <aside className="hidden md:flex md:min-w-[300px] lg:min-w-[400px] md:max-w-[300px] lg:max-w-[400px] min-h-[calc(100vh)] self-start sticky top-0 bg-white border-l border-gray-200 justify-center pt-8">
       <Container>
